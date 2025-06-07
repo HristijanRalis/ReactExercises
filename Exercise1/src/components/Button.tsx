@@ -1,9 +1,18 @@
 import { Component } from 'react'
 
- class Button extends Component {
+interface PropsI {
+    label: string;
+   
+}
+
+ class Button extends Component<PropsI> {
+    constructor(props: PropsI){
+        super(props);
+        console.log("Button", props)
+    }
   render() {
     return (
-      <div>Button</div>
+      <div>{this.props.label}</div>
     )
   }
 }

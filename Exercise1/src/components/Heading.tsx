@@ -1,9 +1,10 @@
-import { Component } from 'react'
+import React from 'react'
+interface HeadingProps {
+  text?: string;
+}
 
-export default class Heading extends Component {
-  render() {
-    return (
-      <div>Heading</div>
-    )
-  }
+export const Heading = ({text} : HeadingProps) => {
+  //const {text} = props
+  return <h1>{text}</h1>
+  
 }
