@@ -3,6 +3,7 @@ import { BlogPost } from './components/Blogpost'
 import Button from './components/Button'
 import { Heading } from './components/Heading'
 import { Person } from './components/Person'
+import { ProfileData } from './components/ProfileData'
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
       {/* <Heading text='Zdravo rale'/>
       <Person  name={"Hristijan"} age={24} isDeveloper={false} /> */}
 
-    <BlogPost />
-
+      <BlogPost />
+      <ProfileData />
       {/* <Button label='Click Me 1' />
       <Button label='Click Me 2' />
       <Button label='Click Me 3' />
