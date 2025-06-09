@@ -3,4 +3,5 @@
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
