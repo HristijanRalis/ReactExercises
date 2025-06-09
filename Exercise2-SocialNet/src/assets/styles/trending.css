@@ -1,0 +1,43 @@
+.head {
+  color: white;
+  width: 20%;
+  padding: 10px;
+}
+.trendingPosts {
+  background-color: rgb(21, 24, 28);
+  padding: 20px;
+  border-radius: 15px;
+}
+.trendingPosts h2 {
+  font-size: 20px;
+}
+.trendingPost {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trendSpan {
+  color: grey;
+  font-size: 14px;
+}
+
+h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.trends {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moreTrends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}

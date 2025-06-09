@@ -1,0 +1,54 @@
+.sidebar {
+  height: 100vh;
+  width: 30%;
+  color: #e7e9ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.sidebar_logo-container {
+  width: fit-content;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+.sidebar_logo {
+  font-size: 30px;
+}
+
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 30px;
+  margin-left: 80px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.sidebarOption_icon {
+  font-size: 26px;
+  margin-right: 20px;
+}
+
+.sidebarTweet {
+  background-color: #1d9bf0;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  height: 52px;
+  width: 300px;
+  margin-left: 70px;
+  cursor: pointer;
+}
+.sidebarTweet:hover {
+  background-color: #1a8cd8;
+}
