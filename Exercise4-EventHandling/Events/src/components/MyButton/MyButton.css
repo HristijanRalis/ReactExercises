@@ -1,0 +1,11 @@
+.MyBtn {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background-color: rgb(5, 77, 53);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+}
