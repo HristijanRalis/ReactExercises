@@ -1,0 +1,18 @@
+.diceContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.diceValue {
+  font-size: 1rem;
+  color: rgb(32, 73, 160);
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(32, 73, 160);
+}
