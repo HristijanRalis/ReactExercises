@@ -1,4 +1,5 @@
 import "./App.css";
+import { BlogPost } from "./Components/BlogPost/BlogPost";
 import { Clock } from "./Components/Clock/Clock";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { Card } from "./Components/StylingWithCss/Card/Card";
@@ -14,6 +15,7 @@ function App() {
       <StylingWithSass />
       <Card /> */}
       <Clock />
+      <BlogPost />
     </>
   );
 }
