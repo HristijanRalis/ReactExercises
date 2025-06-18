@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Input } from "./components/Button/InputElement/Input";
+import { Counter } from "./components/Counter/Counter";
 import { MyButton } from "./components/MyButton/MyButton";
 
 function App() {
@@ -9,11 +10,12 @@ function App() {
       <h1>Events Hooks</h1>
 
       {/* Components */}
-      <Button />
+      {/* <Button />
       <Input />
       <MyButton label="Click" />
       <MyButton label="Double click" />
-      <MyButton label="Mouse over" />
+      <MyButton label="Mouse over" /> */}
+      <Counter />
     </>
   );
 }
