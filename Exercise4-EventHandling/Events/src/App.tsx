@@ -1,6 +1,7 @@
 import "./App.css";
 import { Button } from "./components/Button/Button";
 import { Input } from "./components/Button/InputElement/Input";
+import { ContactCard } from "./components/ContactCard/ContactCard";
 import { Counter } from "./components/Counter/Counter";
 import { DiceRoll } from "./components/DiceRoll/DiceRoll";
 import { MyButton } from "./components/MyButton/MyButton";
@@ -16,8 +17,9 @@ function App() {
       <MyButton label="Click" />
       <MyButton label="Double click" />
       <MyButton label="Mouse over" /> */}
-      <Counter />
-      <DiceRoll />
+      {/* <Counter />
+      <DiceRoll /> */}
+      <ContactCard />
     </>
   );
 }
