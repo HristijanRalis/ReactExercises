@@ -1,4 +1,5 @@
 import "./App.css";
+import { Clock } from "./Components/Clock/Clock";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { Card } from "./Components/StylingWithCss/Card/Card";
 import { StylingWithCss } from "./Components/StylingWithCss/StylingWithCss";
@@ -7,11 +8,12 @@ import { StylingWithSass } from "./Components/StylingWithCss/StylingWithSass/Sty
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <h1>Styling React</h1>
-      {/* <StylingWithCss /> */}
+      { <StylingWithCss /> }
       <StylingWithSass />
-      <Card />
+      <Card /> */}
+      <Clock />
     </>
   );
 }
