@@ -1,0 +1,16 @@
+.navbar {
+  padding: 10px;
+  background-color: hsl(206, 64%, 43%);
+}
+
+.navbar-list {
+  display: flex;
+  padding-left: 0;
+  gap: 10px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.list-item {
+  color: white;
+}
