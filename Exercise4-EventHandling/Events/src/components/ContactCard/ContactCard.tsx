@@ -6,7 +6,9 @@ export const ContactCard = () => {
   const [email, setEmail] = useState();
 
   const handleClickPrev = () => {
-    setUserid((prevValue) => {return (prevValue > 1 ? prevValue - 1 : 1)});
+    setUserid((prevValue) => {
+      return prevValue > 1 ? prevValue - 1 : 1;
+    });
   };
 
   const handleClickNext = () => {
@@ -37,7 +39,12 @@ export const ContactCard = () => {
         <p>Name: {email} </p>
       </div>
       <div className="buttons">
-        <button id="prev" className="btn" onClick={handleClickPrev} disabled={userId === 1}>
+        <button
+          id="prev"
+          className="btn"
+          onClick={handleClickPrev}
+          disabled={userId === 1}
+        >
           Prev
         </button>
         <button id="next" className="btn" onClick={handleClickNext}>
