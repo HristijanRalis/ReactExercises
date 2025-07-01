@@ -1,27 +1,59 @@
 import React, { useState } from "react";
 
+interface FormDataI {
+  name: string;
+  aboutMe: string;
+  profession: string;
+  isLookingForJob: boolean;
+}
+
 export const Form = () => {
-  const [name, setName] = useState("");
-  const [aboutMe, setAboutMe] = useState("");
-  const [profession, setProfession] = useState<string>("");
-  const [isLookingForJob, setLookingForJob] = useState<boolean | undefined>(
-    undefined
-  );
+  const [formData, setFormData] = useState<FormDataI>({
+    name: "",
+    aboutMe: "",
+    profession: "",
+    isLookingForJob: false,
+  });
+  // const [name, setName] = useState("");
+  // const [aboutMe, setAboutMe] = useState("");
+  // const [profession, setProfession] = useState<string>("");
+  // const [isLookingForJob, setLookingForJob] = useState<boolean | undefined>(
+  //   undefined
+  // );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = {
-      name,
-      aboutMe,
-      profession,
-      isLookingForJob,
-    };
-    setName("");
-    setAboutMe("");
-    setProfession("");
-    setLookingForJob(undefined);
-    console.log(formData);
+    setFormData({
+      name: "",
+      aboutMe: "",
+      profession: "",
+      isLookingForJob: false,
+    });
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => {
+      return { ...prev, name: e.target.value }; 
+    });
+  };
+  const handleAboutMeChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData((prev) => {
+      return { ...prev, aboutMe: e.target.value };
+    });
+  };
+  const handleProfessionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData((prev) => {
+      return { ...prev, profession: e.target.value };
+    });
+  };
+  const handleIsLookingForJobChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      isLookingForJob: e.target.checked,
+    }));
   };
   return (
     <>
@@ -32,8 +64,8 @@ export const Form = () => {
             type="text"
             placeholder="Enter your name"
             id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleNameChange}
           />
         </div>
         <div>
@@ -41,16 +73,16 @@ export const Form = () => {
           <textarea
             placeholder="About me"
             id="aboutMe"
-            value={aboutMe}
-            onChange={(e) => setAboutMe(e.target.value)}
+            value={formData.aboutMe}
+            onChange={handleAboutMeChange}
           />
         </div>
         <div>
           <label htmlFor="aboutMe">Profession: </label>
           <select
             id="aboutMe"
-            onChange={(e) => setProfession(e.target.value)}
-            value={profession}
+            onChange={handleProfessionChange}
+            value={formData.profession}
           >
             {" "}
             .<option value="">Choose profession</option>
@@ -63,8 +95,8 @@ export const Form = () => {
           <input
             type="checkbox"
             id="job"
-            checked={isLookingForJob}
-            onChange={(e) => setLookingForJob(e.target.checked)}
+            checked={formData.isLookingForJob}
+            onChange={handleIsLookingForJobChange}
           />
           <label htmlFor="job">Looking for a job: </label>
         </div>
@@ -72,13 +104,13 @@ export const Form = () => {
         <button type="submit">Submit</button>
       </form>
 
-      <p>{name}</p>
-      <p>{aboutMe}</p>
-      <p>{profession}</p>
+      <p>{formData.name}</p>
+      <p>{formData.aboutMe}</p>
+      <p>{formData.profession}</p>
       <p>
-        {isLookingForJob === undefined
+        {formData.isLookingForJob === undefined
           ? ""
-          : isLookingForJob
+          : formData.isLookingForJob
           ? "Looking for a job"
           : "Not looking for a job"}
       </p>
