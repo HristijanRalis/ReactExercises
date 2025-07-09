@@ -1,0 +1,29 @@
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  margin-top: 30px;
+  width: 80%;
+  background-color: rgb(211, 220, 228);
+  color: black;
+  border-radius: 65px;
+  padding: 10px;
+}
+.nav-list {
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+}
