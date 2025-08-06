@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <h1>Countries</h1>
-
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/country/:id" element={<DetailPage />} />
