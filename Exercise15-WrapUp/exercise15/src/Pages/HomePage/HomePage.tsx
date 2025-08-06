@@ -5,21 +5,22 @@ import "./HomePage.css";
 import { useFetch } from "../../hooks/useFetch";
 import { Search } from "../../components/Search/Search";
 export const HomePage = () => {
-  const { data, loading, error } = useFetch<CountryI>(
-    "https://restcountries.com/v3.1/independent?status=true&fields=name,flags"
+  const { data, loading, error } = useFetch<CountryI[]>(
+    "https://restcountries.com/v3.1/independent?status=true&fields=name,flags,cca3"
   );
   const [countriesToRender, setCountriesToRender] = useState<CountryI[]>([]);
 
   const handleSearch = (searchTerm: string) => {
     // TODO IMplementation for search functionality
-    const filteredCountries = data.filter((country) =>
-      country.name.common.toLowerCase().includes(searchTerm)
-    );
+    const filteredCountries =
+      data?.filter((country) =>
+        country.name.common.toLowerCase().includes(searchTerm)
+      ) ?? [];
     setCountriesToRender(filteredCountries);
   };
 
   useEffect(() => {
-    setCountriesToRender(data);
+    setCountriesToRender(data ?? []);
   }, [data]);
   return (
     <>
@@ -31,7 +32,7 @@ export const HomePage = () => {
       <Search handleSearch={handleSearch} />
       <div className="countriesContainer">
         {countriesToRender.map((country) => {
-          return <Country key={country.name.common} country={country} />;
+          return <Country key={country.cca3} country={country} />;
         })}
       </div>
     </>

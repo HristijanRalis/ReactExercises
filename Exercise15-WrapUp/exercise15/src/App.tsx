@@ -7,15 +7,15 @@ import { HomePage } from "./Pages/HomePage/HomePage";
 import { DetailPage } from "./Pages/DetailPage/DetailPage";
 
 function App() {
-  const [count, setCount] = useState(0);
+ 
 
   return (
     <>
       <h1>Countries</h1>
-      
+
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/country/:id" element={<DetailPage />} />
+        <Route path="/country/:cca3" element={<DetailPage />} />
       </Routes>
     </>
   );

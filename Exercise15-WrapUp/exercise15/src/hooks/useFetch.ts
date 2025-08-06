@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 interface UseFetchReturnI<T> {
-  data: T[];
+  data: T | null;
   loading: boolean;
   error: string;
 }
@@ -11,14 +11,14 @@ export const useFetch = <T>(url: string): UseFetchReturnI<T> => {
   // loading
   // error
 
-  const [data, setData] = useState<T[]>([]);
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   useEffect(() => {
     try {
       const fetchData = async () => {
         const response = await fetch(url);
-        const data: T[] = await response.json();
+        const data: T = await response.json();
         setData(data);
       };
       fetchData();
