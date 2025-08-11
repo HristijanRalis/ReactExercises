@@ -1,0 +1,13 @@
+.country {
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  height: 400px;
+  padding: 10px;
+}
+.wrapperImg {
+  width: 100%;
+}
